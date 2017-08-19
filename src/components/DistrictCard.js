@@ -20,7 +20,7 @@ const DistrictCard = ({
 	};
 
 	return (
-		<div
+		<article
 			className={className}
 			onClick={e => findDistrict(e, location)}
 			style={cardOrder}
@@ -53,7 +53,7 @@ const DistrictCard = ({
 					);
 				})}
 			</ul>
-		</div>
+		</article>
 	);
 };
 
