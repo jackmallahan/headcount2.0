@@ -20,7 +20,9 @@ const DistrictContainer = props => {
 								findAverage={props.findAverage}
 							/>
 						)
-					: <div>Select two districts to compare data</div>}
+					: <div className="compare-message">
+							Select two districts to compare data
+						</div>}
 				{props.selected.length === 2
 					? <ComparisonCard
 							fullData={props.fullData}

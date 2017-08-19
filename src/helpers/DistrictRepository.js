@@ -1,5 +1,3 @@
-// import React, { Component } from 'react';
-// import KinderData from '../../data/kindergartners_in_full_day_program';
 import '../styles/DistrictRepository.css';
 
 export class DistrictRepository {
