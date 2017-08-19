@@ -17,7 +17,7 @@ const ComparisonCard = ({
 		selected[1]
 	);
 	return (
-		<div className="card comparison-card">
+		<article className="card comparison-card">
 			<h3>
 				{selected[0]} Average: {card1Average}
 			</h3>
@@ -27,7 +27,7 @@ const ComparisonCard = ({
 			<h3>
 				{selected[1]} Average: {card2Average}
 			</h3>
-		</div>
+		</article>
 	);
 };
 

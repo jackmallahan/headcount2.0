@@ -5,7 +5,7 @@ import '../styles/DistrictRepository.css';
 
 const DistrictContainer = props => {
 	return (
-		<div className="district-container">
+		<section className="district-container">
 			<div className="selected-cards">
 				{props.selected.length > 0
 					? props.selected.map((card, index) =>
@@ -42,7 +42,7 @@ const DistrictContainer = props => {
 					className="card"
 				/>
 			)}
-		</div>
+		</section>
 	);
 };
 
