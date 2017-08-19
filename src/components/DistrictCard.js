@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/DistrictRepository.css";
 
-const DistrictCard = ({ location, data, getData, findDistrict, className }) => {
+const DistrictCard = ({
+  location,
+  data,
+  getData,
+  findDistrict,
+  className,
+  order
+}) => {
   const stylez = {
     color: "white",
     backgroundColor: "green"
@@ -10,9 +17,16 @@ const DistrictCard = ({ location, data, getData, findDistrict, className }) => {
     color: "white",
     backgroundColor: "red"
   };
+  const cardOrder = {
+    order: order
+  };
 
   return (
-    <div className={className} onClick={e => findDistrict(e, location)}>
+    <div
+      className={className}
+      onClick={e => findDistrict(e, location)}
+      style={cardOrder}
+    >
       <h3>
         {location}
       </h3>
