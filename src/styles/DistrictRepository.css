@@ -34,6 +34,12 @@
   justify-content: center;
 }
 
+.selected-cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .card {
   align-items: center;
   background-color: lightgray;
@@ -45,6 +51,46 @@
   width: 30%;
 }
 
+.selected-district-card {
+  opacity: 0;
+  opacity: 1\9;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .clicked {
   background-color: purple;
   outline: 3px solid green;
@@ -52,6 +98,7 @@
 
 .card:hover {
   background: yellow;
+  transform: scale(1.1);
 }
 
 .card h3 {

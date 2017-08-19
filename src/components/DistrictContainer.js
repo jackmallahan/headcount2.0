@@ -14,9 +14,10 @@ const DistrictContainer = props => {
                 getData={props.getData}
                 key={Math.random()}
                 findDistrict={props.findDistrict}
+                className="card selected-district-card"
               />
             )
-          : null}
+          : <div>Select two districts to compare data</div>}
       </div>
       {props.foundData.map(place =>
         <DistrictCard
@@ -25,6 +26,7 @@ const DistrictContainer = props => {
           getData={props.getData}
           key={Math.random()}
           findDistrict={props.findDistrict}
+          className="card"
         />
       )}
     </div>
