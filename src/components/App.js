@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import '../styles/DistrictRepository.css';
 import DistrictContainer from './DistrictContainer';
 import Controls from './Controls';
@@ -49,12 +48,7 @@ class App extends Component {
 		return card.classList.toggle('clicked');
 	}
 
-	findSearchedDistrict() {
-		let found = fullData.findByName(this.state.input);
-	}
-
 	removeSelectedDistrict(location) {
-		console.log('removeSelectedDistrict');
 		let selected = this.state.selectedCards;
 		if (location === selected[0]) {
 			selected.shift();
@@ -70,7 +64,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log(fullData.findByName(this.state.selectedCards[0]));
 		if (this.state.cards === []) {
 			return <div className="no-cards"> hello</div>;
 		} else {
@@ -78,7 +71,6 @@ class App extends Component {
 				<div className="app-container">
 					<Controls
 						input={this.state.input}
-						findDistrict={this.findSearchedDistrict.bind(this)}
 						handleChange={this.handleChange}
 						DistrictRepository={fullData}
 					/>

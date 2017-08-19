@@ -1,117 +1,175 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(255, 255, 250);
+	color: rgb(25, 52, 65);
+}
+
+.main-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../../assets/chalkboard.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 15vh;
+}
+
+.main-title {
+	background: none;
+	color: white;
+	font-family: 'Permanent Marker', cursive;
 }
 
 .district-repository-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .controls-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .search-input {
-  height: 20px;
-  margin: 10px;
-  width: 200px;
+	height: 20px;
+	margin: 10px;
+	width: 200px;
 }
 
 .search-button {
-  height: 20px;
-  width: 100px;
+	height: 20px;
+	width: 100px;
 }
 
 .district-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .selected-cards {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+	background-image: url(../../assets/chalkboard.jpeg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+	height: 900px;
 }
 
 .card {
-  align-items: center;
-  background-color: lightgray;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-  padding-bottom: 10px;
-  width: 30%;
+	align-items: center;
+	background-image: url(../../assets/chalkboard.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px;
+	width: 530px;
+	padding: 25px;
+	border-radius: 5px;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20px;
+}
+
+.card ul {
+	width: 80%;
+	background: none;
+}
+
+.card li {
+	display: flex;
+	justify-content: space-around;
+	background: none;
+}
+
+.card span {
+	display: flex;
+	width: 50px;
+	background-color: inherit;
+}
+
+.year-data {
+	flex-direction: row-reverse;
+}
+
+.compare-message {
+	font-size: 50px;
+	margin: 25px 0;
 }
 
 .selected-district-card {
-  opacity: 0;
-  opacity: 1\9;
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
+	background: none;
+	opacity: 0;
+	opacity: 1\9;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 
-  -webkit-animation-duration: .5s;
-  -moz-animation-duration: .5s;
-  animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	animation-duration: .5s;
 }
 
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .clicked {
-  background-color: purple;
-  outline: 3px solid green;
+	background-color: purple;
+	outline: 3px solid green;
 }
 
 .comparison-card {
-  order: 1;
+	background: none;
+	order: 1;
 }
 
 .card:hover {
-  background: yellow;
-  transform: scale(1.1);
-  transition-duration: .5s;
+	transform: scale(1.1);
+	transition-duration: .5s;
 }
 
 .card h3 {
-  margin: 10px;
+	margin: 10px;
+	background: none;
+	color: rgb(255, 255, 250);
 }
 
 .card-list {
-  list-style-type: none;
+	list-style-type: none;
 }

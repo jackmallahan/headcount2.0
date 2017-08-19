@@ -3,20 +3,6 @@ import React, { Component } from 'react';
 // import { DistrictContainer } from './DistrictContainer';
 
 class Controls extends Component {
-	constructor() {
-		super();
-		this.submitInput = this.submitInput.bind(this);
-	}
-
-	submitInput() {
-		const foundData = this.props.findDistrict(this.state.input);
-		this.props.findDistrict(this.state.input);
-		this.setState({
-			input: ''
-			// dataCards: foundData
-		});
-	}
-
 	render() {
 		return (
 			<div className="controls-container">
@@ -26,9 +12,6 @@ class Controls extends Component {
 					placeholder="Search district"
 					value={this.props.input}
 				/>
-				<button onClick={this.props.findDistrict} className="search-button">
-					Search
-				</button>
 			</div>
 		);
 	}
