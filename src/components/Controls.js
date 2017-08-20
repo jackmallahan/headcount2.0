@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import { DistrictContainer } from './DistrictContainer';
+import PropTypes from 'prop-types';
 
 class Controls extends Component {
 	render() {
@@ -16,5 +15,10 @@ class Controls extends Component {
 		);
 	}
 }
+
+Controls.propTypes = {
+	handleChange: PropTypes.func,
+	input: PropTypes.string
+};
 
 export default Controls;
