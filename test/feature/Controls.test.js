@@ -18,30 +18,20 @@ describe("Controls", () => {
   ];
 
   beforeEach(() => {
-    wrapper = shallow(
-      <Controls
-        findDistrict={mockFn}
-        handleChange={mockFn}
-        DistrictRepository={mockData}
-      />
-    );
+    wrapper = shallow(<Controls handleChange={mockFn} input="" />);
   });
 
-  it("should render a div with a className of controls-container", () => {
-    expect(wrapper.find("div.controls-container").length).toEqual(1);
+  it("should render section with a className of controls-container", () => {
+    expect(wrapper.find("section.controls-container").length).toEqual(1);
   });
 
   it("should render an input with a className of search-input", () => {
     expect(wrapper.find("input.search-input").length).toEqual(1);
   });
 
-  it("should render a button with a className of search-button", () => {
-    expect(wrapper.find("button.search-button").length).toEqual(1);
-  });
-
-  it("should be passed three props from App", () => {
+  it("should be passed two props from App", () => {
     let propKeys = Object.keys(wrapper.unrendered.props);
-    expect(propKeys.length).toEqual(3);
+    expect(propKeys.length).toEqual(2);
   });
 
   it("should fire function on change", () => {
@@ -51,14 +41,7 @@ describe("Controls", () => {
     expect(mockFn).toHaveBeenCalled();
   });
 
-  it("should fire function on button click", () => {
-    const button = wrapper.find("button");
-    button.simulate("click");
-
-    expect(mockFn).toHaveBeenCalled();
-  });
-
-  it("should be passed a DistrictRepository prop that holds data", () => {
-    expect(wrapper.unrendered.props.DistrictRepository).toEqual(mockData);
+  it("should be passed an input prop that starts as an empty string", () => {
+    expect(wrapper.unrendered.props.input).toEqual("");
   });
 });
