@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/styles.css';
 import PropTypes from 'prop-types';
+import { DistrictRepository } from '../helpers/DistrictRepository';
+import KinderData from '../../data/kindergartners_in_full_day_program';
 
 const DistrictCard = ({
 	location,
@@ -19,6 +21,7 @@ const DistrictCard = ({
 	const cardOrder = {
 		order: order
 	};
+	const district = new DistrictRepository(KinderData);
 	return (
 		<article
 			className={className}
@@ -28,6 +31,9 @@ const DistrictCard = ({
 			<h3>
 				{location}
 			</h3>
+			<h5>
+				Average: {district.findAverage(location)}
+			</h5>
 			<ul className="card-list">
 				{data.sort((a, b) => a.TimeFrame - b.TimeFrame).map((year, i) => {
 					year.Data =
