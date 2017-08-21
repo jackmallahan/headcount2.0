@@ -2,7 +2,6 @@ import React from 'react';
 import DistrictCard from '../../src/components/DistrictCard';
 import MockData from '../../src/helpers/MockData';
 import { shallow, render, mount } from 'enzyme';
-import { DistrictRepository } from '../../src/helpers/DistrictRepository';
 
 describe('DistrictCard Component', () => {
 	let wrapper;
