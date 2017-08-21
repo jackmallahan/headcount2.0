@@ -1,10 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
   background-color: rgb(255, 255, 250);
   color: rgb(25, 52, 65);
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+/* HEADER STYLES */
 
 .main-header {
   align-items: flex-end;
@@ -26,6 +28,8 @@
   width: 95%;
 }
 
+/* CONTROLS STYLES*/
+
 .controls-container {
   align-items: center;
   background: #28292b;
@@ -45,12 +49,7 @@
   width: 50%;
 }
 
-.district-repository-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* DISTRICT CONTAINER STYLES */
 
 .district-container {
   background: rgb(255, 255, 250);
@@ -70,9 +69,7 @@
   width: 85%;
 }
 
-.selected-cards .card {
-  border: none;
-}
+/* CARD STYLES */
 
 .card {
   align-items: center;
@@ -89,51 +86,31 @@
   width: 20%;
 }
 
-.card ul {
-  background: none;
-  width: 30%;
-}
-
-.card li {
-  background: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card span {
-  background-color: inherit;
-  display: flex;
-}
-
-.compare-message {
-  background: none;
-  color: white;
-  font-size: 50px;
-  height: 100%;
-  margin: 0;
-  text-align: center;
-  width: 100%;
+.selected-cards .card {
+  border: none;
 }
 
 .selected-district-card {
+  animation: fadeIn ease-in 1;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
   background: none;
+  -moz-animation: fadeIn ease-in 1;
+  -moz-animation-duration: .5s;
+  -moz-animation-fill-mode: forwards;
   opacity: 0;
   opacity: 1\9;
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-
   -webkit-animation-duration: .5s;
-  -moz-animation-duration: .5s;
-  animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .selected-district-card h3 {
   font-family: 'Permanent Marker', cursive;
   font-size: 32px;
+}
+
+.clicked {
+  background-color: #4e6a53;
 }
 
 @-webkit-keyframes fadeIn {
@@ -163,32 +140,24 @@
   }
 }
 
-.clicked {
-  background-color: #4e6a53;
-}
-
-.comparison-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  font-size: 32px;
+.card ul {
   background: none;
-  order: 1;
+  width: 30%;
 }
 
-.comparison-card h3 {
-  width: 100%;
+.card li {
+  background: none;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.compare-data {
-  color: #28292b;
-  text-align: center;
-  width: 50;
+.card span {
+  background-color: inherit;
+  display: flex;
+}
+
+.card-list {
+  list-style-type: none;
 }
 
 .card:hover {
@@ -197,11 +166,11 @@
 }
 
 .card h3 {
-  margin: 10px;
   background: none;
   color: rgb(255, 255, 250);
-  text-align: center;
   justify-content: center;
+  margin: 10px;
+  text-align: center;
 }
 
 .card h5 {
@@ -210,8 +179,38 @@
   margin-bottom: 5px;
 }
 
-.card-list {
-  list-style-type: none;
+.comparison-card {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  justify-content: space-between;
+  order: 1;
+  text-align: center;
+}
+
+.comparison-card h3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.compare-message {
+  background: none;
+  color: white;
+  font-size: 50px;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.compare-data {
+  color: #28292b;
+  text-align: center;
+  width: 50;
 }
 
 @media (max-width: 2400px) {
@@ -243,17 +242,17 @@
     font-size: 32px;
   }
 
+  .card {
+    font-size: 16px;
+    width: 40%;
+  }
+
   .card h3 {
     font-size: 24px;
   }
 
   .card ul {
     width: 70%;
-  }
-
-  .card {
-    font-size: 16px;
-    width: 40%;
   }
 
   .selected-district-card {
@@ -297,17 +296,17 @@
 }
 
 @media (max-width: 450px) {
-  .selected-district-card {
-    display: none;
-  }
-
   .selected-cards {
     align-items: center;
     flex-direction: column;
     justify-content: center;
   }
 
+  .selected-district-card {
+    display: none;
+  }
+
   .comparison-card {
-    display: flex;
+    width: 50%;
   }
 }
