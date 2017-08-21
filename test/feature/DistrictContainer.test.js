@@ -7,8 +7,8 @@ import { shallow, render, mount } from 'enzyme';
 describe('DistrictContainer Component', () => {
 	let wrapper;
 	let mockFn = jest.fn();
-	let foundDataStub = ['COLORADO', 'FARTVILLE', 'ARAPAHOE'];
-	let selectedStub = ['COLORADO', 'FARTVILLE'];
+	let foundDataStub = ['COLORADO', 'ACADEMY 20', 'ARAPAHOE'];
+	let selectedStub = ['COLORADO', 'ACADEMY 20'];
 	let selectedCardKeys;
 	let DCardPropsArray;
 	let comparisonCardKeys;

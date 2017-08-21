@@ -47,13 +47,12 @@ export class DistrictRepository {
 		});
 
 		let districtName = newData[userInput];
-		let answer;
 
 		if (districtKeys.includes(userInput)) {
-			return (answer = {
+			return {
 				location: userInput,
 				data: this.cleanData(districtName)
-			});
+			};
 		}
 	}
 

@@ -13,7 +13,7 @@ const DistrictCard = ({
 	order
 }) => {
 	const stylez = {
-		color: 'rgb(25, 52, 65)'
+		color: 'rgb(255, 255, 250)'
 	};
 	const underFive = {
 		color: 'red'

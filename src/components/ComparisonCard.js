@@ -20,13 +20,19 @@ const ComparisonCard = ({
 	return (
 		<article className="card comparison-card">
 			<h3>
-				{selected[0]} Average: {card1Average}
+				{selected[0]}
+				<span className="compare-data">
+					{card1Average}
+				</span>
 			</h3>
 			<h3>
-				Ratio: {comparedRatio.compared}
+				Ratio<span className="compare-data">{comparedRatio.compared}</span>
 			</h3>
 			<h3>
-				{selected[1]} Average: {card2Average}
+				{selected[1]}
+				<span className="compare-data">
+					{card2Average}
+				</span>
 			</h3>
 		</article>
 	);
